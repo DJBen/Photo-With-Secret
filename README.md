@@ -13,6 +13,10 @@ Usage
 -----------------
 Open with Xcode, run the app. 
 
+![Hide a message](https://raw.github.com/DJBen/Photo-With-Secret/master/Photo%20With%20Secret/Screenshot%202013.07.15%2001.02.35.png "Hide A Message")
+
+![Reveal a message](https://raw.github.com/DJBen/Photo-With-Secret/master/Photo%20With%20Secret/Screenshot%202013.07.15%2001.02.59.png "Reveal A Message")
+
 Implementation Details
 -----------------
 First, it convert the message into [Brainfuck](http://en.wikipedia.org/wiki/Brainfuck) language using my handy [NSString+Brainfuck](https://github.com/DJBen/NSString-Brainfuck) category. This language only has 8 characters (+ - > < . , [ ]).
