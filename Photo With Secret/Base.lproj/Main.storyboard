@@ -1,23 +1,360 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.9" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AF7-5Y-uKU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <development version="5000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.9"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Decrypt Choose Photo View Controller - Reveal Secret-->
+        <scene sceneID="tiJ-Ll-WVl">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <viewController id="EbX-oP-MDb" customClass="DecryptChoosePhotoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3yz-xV-Opb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5UH-Xy-gzS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a photo to reveal a secret" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="Oed-l0-Rik">
+                                <rect key="frame" x="29" y="87" width="262" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2U-uu-C03">
+                                <rect key="frame" x="110" y="178" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Existing">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="existingPhotoButtonClicked:" destination="EbX-oP-MDb" eventType="touchUpInside" id="Rf2-FU-8Qy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Reveal Secret" id="3CW-Fq-ate">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="9gy-jp-ng6">
+                            <connections>
+                                <action selector="nextButtonClicked:" destination="EbX-oP-MDb" id="CT3-Df-tXL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="5UH-Xy-gzS" id="9fR-Zb-4DZ"/>
+                        <outlet property="choosePhotoLabel" destination="Oed-l0-Rik" id="xE0-nF-ntF"/>
+                        <outlet property="existingPhotoButton" destination="J2U-uu-C03" id="wmv-co-w4n"/>
+                        <segue destination="w8z-1q-Bym" kind="push" identifier="decryptMessageSegue" id="uao-Hm-JvN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqs-7i-quX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-199"/>
+        </scene>
+        <!--Navigation Controller - Hide Secret-->
+        <scene sceneID="7Bc-Uh-ReM">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="dM8-Vg-res" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Hide Secret" image="HideSecretIcon" id="02X-Cw-dGF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3yZ-bd-Bc5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KAu-9T-dTI" kind="relationship" relationship="rootViewController" id="Ya0-UH-eJX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xM1-66-9m1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="-895"/>
+        </scene>
+        <!--Encrypt Choose Photo View Controller - Hide Secret-->
+        <scene sceneID="enU-hh-lsF">
+            <objects>
+                <viewController id="KAu-9T-dTI" customClass="EncryptChoosePhotoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o2y-ah-j81">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="211-7D-QHD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a photo to hold a secret" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="255" translatesAutoresizingMaskIntoConstraints="NO" id="mNd-7g-cEJ">
+                                <rect key="frame" x="33" y="87" width="255" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef3-Ge-bMQ">
+                                <rect key="frame" x="56" y="178" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newPhotoButtonClicked:" destination="KAu-9T-dTI" eventType="touchUpInside" id="2kX-R4-AbC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ex-dI-XDm">
+                                <rect key="frame" x="164" y="178" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Existing">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="existingPhotoButtonClicked:" destination="KAu-9T-dTI" eventType="touchUpInside" id="TW5-La-6o2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Hide Secret" id="cV6-wl-iO9">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="TCu-DF-1O9">
+                            <connections>
+                                <segue destination="LvD-uR-exs" kind="push" identifier="messageSegue" id="Udx-9h-Dsx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="211-7D-QHD" id="0Pu-MN-0dY"/>
+                        <outlet property="choosePhotoLabel" destination="mNd-7g-cEJ" id="t8r-eN-PNI"/>
+                        <outlet property="existingPhotoButton" destination="4Ex-dI-XDm" id="f4H-3x-2v9"/>
+                        <outlet property="takeNewPhotoButton" destination="ef3-Ge-bMQ" id="xLt-bL-fZr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNO-Bp-4Nc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="-895"/>
+        </scene>
+        <!--Encrypt Message View Controller - Write A Message-->
+        <scene sceneID="IyN-Jp-1nQ">
+            <objects>
+                <viewController id="LvD-uR-exs" customClass="EncryptMessageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DXj-KA-ROR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dzf-y8-2p2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Output image quality" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="172" translatesAutoresizingMaskIntoConstraints="NO" id="VMJ-iN-EXR">
+                                <rect key="frame" x="74" y="215" width="172" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write a secret message" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="185" translatesAutoresizingMaskIntoConstraints="NO" id="yES-cA-qfT">
+                                <rect key="frame" x="68" y="83" width="185" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3e-ES-KUp">
+                                <rect key="frame" x="20" y="142" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LvD-uR-exs" id="CGc-zr-dMn"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do not resize the ouput image or you will lose your embedded secret." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="Sdq-4w-V1P">
+                                <rect key="frame" x="0.0" y="380" width="320" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="Vyn-jM-lVA">
+                                <rect key="frame" x="50" y="271" width="220" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Low"/>
+                                    <segment title="Medium"/>
+                                    <segment title="High"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Write A Message" id="1Jq-7I-lDB">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="jh3-Th-HYS">
+                            <connections>
+                                <action selector="nextButtonClicked:" destination="LvD-uR-exs" id="6dg-Nn-KMo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Dzf-y8-2p2" id="ncz-U9-9FJ"/>
+                        <outlet property="doNotResizeWarningLabel" destination="Sdq-4w-V1P" id="xrc-aw-rpE"/>
+                        <outlet property="outputImageQualityLabel" destination="VMJ-iN-EXR" id="RvP-C7-MeF"/>
+                        <outlet property="outputQualitySegmentedControl" destination="Vyn-jM-lVA" id="GtU-uD-OoM"/>
+                        <outlet property="secretTextField" destination="f3e-ES-KUp" id="N25-0t-Gqf"/>
+                        <outlet property="writeMessageLabel" destination="yES-cA-qfT" id="9Dc-lH-NCb"/>
+                        <segue destination="39C-BN-7Tk" kind="push" identifier="finishSegue" id="oMT-Vv-TkG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtV-vT-H5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="-895"/>
+        </scene>
+        <!--View Controller - Finished!-->
+        <scene sceneID="SbL-y6-V09">
+            <objects>
+                <viewController id="39C-BN-7Tk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0uO-UT-ChJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Finished!" id="OqM-ri-Mif"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4HP-Gz-Tk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1120" y="-895"/>
+        </scene>
+        <!--Decrypt Secret View Controller - Secret Here-->
+        <scene sceneID="Ian-Gr-Td9">
+            <objects>
+                <viewController id="w8z-1q-Bym" customClass="DecryptSecretViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WQI-ao-79x">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here is the secret message" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="262" translatesAutoresizingMaskIntoConstraints="NO" id="pTY-0a-o8e">
+                                <rect key="frame" x="29" y="87" width="262" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ult-j1-hiF">
+                                <rect key="frame" x="20" y="161" width="280" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Secret Here" id="aPk-7D-ode"/>
+                    <connections>
+                        <outlet property="secretMessageContentLabel" destination="ult-j1-hiF" id="hOt-3E-eEx"/>
+                        <outlet property="secretMessageLabel" destination="pTY-0a-o8e" id="bJb-5r-G04"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="znB-gb-Ms6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="-199"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qTF-gw-hlE">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="AF7-5Y-uKU" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="VHh-Bs-b0I">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dM8-Vg-res" kind="relationship" relationship="viewControllers" id="v1i-ZS-hOf"/>
+                        <segue destination="14h-IL-R7e" kind="relationship" relationship="viewControllers" id="4ET-7X-MS9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWV-Kb-wLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-925" y="-525"/>
+        </scene>
+        <!--Navigation Controller - Reveal Secret-->
+        <scene sceneID="Wwt-PC-t8d">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="14h-IL-R7e" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Reveal Secret" image="FindSecretIcon" id="4u6-E2-wDK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eIg-we-bkC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EbX-oP-MDb" kind="relationship" relationship="rootViewController" id="MVc-RA-LIs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j96-el-Ts5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="-199"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FindSecretIcon" width="48" height="48"/>
+        <image name="HideSecretIcon" width="60" height="60"/>
+    </resources>
+    <classes>
+        <class className="DecryptChoosePhotoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DecryptChoosePhotoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="existingPhotoButtonClicked:"/>
+                <relationship kind="action" name="nextButtonClicked:"/>
+                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="choosePhotoLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="existingPhotoButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="DecryptSecretViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DecryptSecretViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="secretMessageContentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="secretMessageLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EncryptChoosePhotoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EncryptChoosePhotoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="existingPhotoButtonClicked:"/>
+                <relationship kind="action" name="newPhotoButtonClicked:"/>
+                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="choosePhotoLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="existingPhotoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="takeNewPhotoButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EncryptMessageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EncryptMessageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="nextButtonClicked:"/>
+                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="doNotResizeWarningLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="outputImageQualityLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="outputQualitySegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="secretTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="writeMessageLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
