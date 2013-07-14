@@ -25,4 +25,4 @@ Next, it convert the image into bitmap (resize it first if necessary). For every
 
 Note
 -----------------
-Do not resize the output image, or you will probably (>99%) lose your hidden message in it!
+**Do not** resize the output image, or you will probably (>99%) lose your hidden message in it!
