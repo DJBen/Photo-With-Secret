@@ -13,7 +13,7 @@
 #import "NSString+Brainfuck.h"
 #import "MMProgressHUD.h"
 
-@interface EncryptMessageViewController ()
+@interface EncryptMessageViewController () <UITextFieldDelegate>
 
 @property (strong) UIImage *encodedImage;
 
@@ -258,4 +258,11 @@
         });
     });
 }
+
+#pragma mark - Text Field Delegate
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 @end

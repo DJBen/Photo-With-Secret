@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BB4DE482C3D4A618E6A6856 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C691127A3D484F089AAF6CAA /* libPods.a */; };
 		F45DD92F177EC8E200B6A424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DD92E177EC8E200B6A424 /* Foundation.framework */; };
 		F45DD931177EC8E200B6A424 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DD930177EC8E200B6A424 /* CoreGraphics.framework */; };
 		F45DD933177EC8E200B6A424 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DD932177EC8E200B6A424 /* UIKit.framework */; };
@@ -14,13 +15,23 @@
 		F45DD93B177EC8E200B6A424 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DD93A177EC8E200B6A424 /* main.m */; };
 		F45DD93F177EC8E200B6A424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DD93E177EC8E200B6A424 /* AppDelegate.m */; };
 		F45DD942177EC8E200B6A424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45DD940177EC8E200B6A424 /* Main.storyboard */; };
-		F45DD945177EC8E200B6A424 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DD944177EC8E200B6A424 /* ViewController.m */; };
+		F45DD945177EC8E200B6A424 /* EncryptChoosePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DD944177EC8E200B6A424 /* EncryptChoosePhotoViewController.m */; };
 		F45DD947177EC8E200B6A424 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45DD946177EC8E200B6A424 /* Images.xcassets */; };
 		F45DD94E177EC8E200B6A424 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DD94D177EC8E200B6A424 /* XCTest.framework */; };
 		F45DD94F177EC8E300B6A424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DD92E177EC8E200B6A424 /* Foundation.framework */; };
 		F45DD950177EC8E300B6A424 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DD932177EC8E200B6A424 /* UIKit.framework */; };
 		F45DD958177EC8E300B6A424 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F45DD956177EC8E300B6A424 /* InfoPlist.strings */; };
 		F45DD95A177EC8E300B6A424 /* Photo_With_SecretTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DD959177EC8E300B6A424 /* Photo_With_SecretTests.m */; };
+		F45DD96B177F0AD100B6A424 /* NSString+Brainfuck.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DD96A177EE40000B6A424 /* NSString+Brainfuck.m */; };
+		F45DD96D177F1E7800B6A424 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45DD96C177F1E7700B6A424 /* MobileCoreServices.framework */; };
+		F45DD972177F2FF600B6A424 /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DD971177F2FC500B6A424 /* ImageHelper.m */; };
+		F45DD973177F56B900B6A424 /* EncryptMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DD96F177F214900B6A424 /* EncryptMessageViewController.m */; };
+		F45DD976177F605100B6A424 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F45DD975177F605100B6A424 /* UIImage+ImageEffects.m */; };
+		F4C8BDCA178012C100286C09 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C8BDC9178012C100286C09 /* UIImage+Resize.m */; };
+		F4C8BDCF1780130200286C09 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C8BDCC1780130200286C09 /* UIImage+Alpha.m */; };
+		F4C8BDD01780130200286C09 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C8BDCE1780130200286C09 /* UIImage+RoundedCorner.m */; };
+		F4C8BDD317802D6600286C09 /* DecryptChoosePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C8BDD217802D3500286C09 /* DecryptChoosePhotoViewController.m */; };
+		F4C8BDF11780AF9A00286C09 /* DecryptSecretViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C8BDF01780AE0C00286C09 /* DecryptSecretViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1399CF19B1435182D895D4 /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		C691127A3D484F089AAF6CAA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45DD92B177EC8E200B6A424 /* Photo With Secret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo With Secret.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45DD92E177EC8E200B6A424 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F45DD930177EC8E200B6A424 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +58,35 @@
 		F45DD93D177EC8E200B6A424 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F45DD93E177EC8E200B6A424 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F45DD941177EC8E200B6A424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F45DD943177EC8E200B6A424 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F45DD944177EC8E200B6A424 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F45DD943177EC8E200B6A424 /* EncryptChoosePhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptChoosePhotoViewController.h; sourceTree = "<group>"; };
+		F45DD944177EC8E200B6A424 /* EncryptChoosePhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptChoosePhotoViewController.m; sourceTree = "<group>"; };
 		F45DD946177EC8E200B6A424 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F45DD94C177EC8E200B6A424 /* Photo With SecretTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo With SecretTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45DD94D177EC8E200B6A424 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F45DD955177EC8E300B6A424 /* Photo With SecretTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Photo With SecretTests-Info.plist"; sourceTree = "<group>"; };
 		F45DD957177EC8E300B6A424 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F45DD959177EC8E300B6A424 /* Photo_With_SecretTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo_With_SecretTests.m; sourceTree = "<group>"; };
+		F45DD969177EE40000B6A424 /* NSString+Brainfuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Brainfuck.h"; sourceTree = "<group>"; };
+		F45DD96A177EE40000B6A424 /* NSString+Brainfuck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Brainfuck.m"; sourceTree = "<group>"; };
+		F45DD96C177F1E7700B6A424 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F45DD96E177F214900B6A424 /* EncryptMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptMessageViewController.h; sourceTree = "<group>"; };
+		F45DD96F177F214900B6A424 /* EncryptMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptMessageViewController.m; sourceTree = "<group>"; };
+		F45DD970177F2FC500B6A424 /* ImageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
+		F45DD971177F2FC500B6A424 /* ImageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
+		F45DD974177F605100B6A424 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		F45DD975177F605100B6A424 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		F48EAD4817931159004E08A9 /* Screenshot 2013.07.15 01.02.35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2013.07.15 01.02.35.png"; sourceTree = "<group>"; };
+		F48EAD4917931159004E08A9 /* Screenshot 2013.07.15 01.02.59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2013.07.15 01.02.59.png"; sourceTree = "<group>"; };
+		F4C8BDC8178012C100286C09 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		F4C8BDC9178012C100286C09 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		F4C8BDCB1780130200286C09 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		F4C8BDCC1780130200286C09 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		F4C8BDCD1780130200286C09 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		F4C8BDCE1780130200286C09 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		F4C8BDD117802D3500286C09 /* DecryptChoosePhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecryptChoosePhotoViewController.h; sourceTree = "<group>"; };
+		F4C8BDD217802D3500286C09 /* DecryptChoosePhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecryptChoosePhotoViewController.m; sourceTree = "<group>"; };
+		F4C8BDEF1780AE0C00286C09 /* DecryptSecretViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecryptSecretViewController.h; sourceTree = "<group>"; };
+		F4C8BDF01780AE0C00286C09 /* DecryptSecretViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecryptSecretViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +94,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45DD96D177F1E7800B6A424 /* MobileCoreServices.framework in Frameworks */,
 				F45DD931177EC8E200B6A424 /* CoreGraphics.framework in Frameworks */,
 				F45DD933177EC8E200B6A424 /* UIKit.framework in Frameworks */,
 				F45DD92F177EC8E200B6A424 /* Foundation.framework in Frameworks */,
+				2BB4DE482C3D4A618E6A6856 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +122,7 @@
 				F45DD953177EC8E300B6A424 /* Photo With SecretTests */,
 				F45DD92D177EC8E200B6A424 /* Frameworks */,
 				F45DD92C177EC8E200B6A424 /* Products */,
+				3D1399CF19B1435182D895D4 /* Pods/Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +138,12 @@
 		F45DD92D177EC8E200B6A424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F45DD96C177F1E7700B6A424 /* MobileCoreServices.framework */,
 				F45DD92E177EC8E200B6A424 /* Foundation.framework */,
 				F45DD930177EC8E200B6A424 /* CoreGraphics.framework */,
 				F45DD932177EC8E200B6A424 /* UIKit.framework */,
 				F45DD94D177EC8E200B6A424 /* XCTest.framework */,
+				C691127A3D484F089AAF6CAA /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,9 +154,16 @@
 				F45DD93D177EC8E200B6A424 /* AppDelegate.h */,
 				F45DD93E177EC8E200B6A424 /* AppDelegate.m */,
 				F45DD940177EC8E200B6A424 /* Main.storyboard */,
-				F45DD943177EC8E200B6A424 /* ViewController.h */,
-				F45DD944177EC8E200B6A424 /* ViewController.m */,
+				F45DD943177EC8E200B6A424 /* EncryptChoosePhotoViewController.h */,
+				F45DD944177EC8E200B6A424 /* EncryptChoosePhotoViewController.m */,
+				F45DD96E177F214900B6A424 /* EncryptMessageViewController.h */,
+				F45DD96F177F214900B6A424 /* EncryptMessageViewController.m */,
+				F4C8BDD117802D3500286C09 /* DecryptChoosePhotoViewController.h */,
+				F4C8BDD217802D3500286C09 /* DecryptChoosePhotoViewController.m */,
+				F4C8BDEF1780AE0C00286C09 /* DecryptSecretViewController.h */,
+				F4C8BDF01780AE0C00286C09 /* DecryptSecretViewController.m */,
 				F45DD946177EC8E200B6A424 /* Images.xcassets */,
+				F45DD963177ED30200B6A424 /* Brainfuck */,
 				F45DD935177EC8E200B6A424 /* Supporting Files */,
 			);
 			path = "Photo With Secret";
@@ -126,6 +172,18 @@
 		F45DD935177EC8E200B6A424 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F48EAD4817931159004E08A9 /* Screenshot 2013.07.15 01.02.35.png */,
+				F48EAD4917931159004E08A9 /* Screenshot 2013.07.15 01.02.59.png */,
+				F45DD970177F2FC500B6A424 /* ImageHelper.h */,
+				F45DD971177F2FC500B6A424 /* ImageHelper.m */,
+				F45DD974177F605100B6A424 /* UIImage+ImageEffects.h */,
+				F45DD975177F605100B6A424 /* UIImage+ImageEffects.m */,
+				F4C8BDC8178012C100286C09 /* UIImage+Resize.h */,
+				F4C8BDC9178012C100286C09 /* UIImage+Resize.m */,
+				F4C8BDCB1780130200286C09 /* UIImage+Alpha.h */,
+				F4C8BDCC1780130200286C09 /* UIImage+Alpha.m */,
+				F4C8BDCD1780130200286C09 /* UIImage+RoundedCorner.h */,
+				F4C8BDCE1780130200286C09 /* UIImage+RoundedCorner.m */,
 				F45DD936177EC8E200B6A424 /* Photo With Secret-Info.plist */,
 				F45DD937177EC8E200B6A424 /* InfoPlist.strings */,
 				F45DD93A177EC8E200B6A424 /* main.m */,
@@ -152,6 +210,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F45DD963177ED30200B6A424 /* Brainfuck */ = {
+			isa = PBXGroup;
+			children = (
+				F45DD969177EE40000B6A424 /* NSString+Brainfuck.h */,
+				F45DD96A177EE40000B6A424 /* NSString+Brainfuck.m */,
+			);
+			name = Brainfuck;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F45DD95D177EC8E300B6A424 /* Build configuration list for PBXNativeTarget "Photo With Secret" */;
 			buildPhases = (
+				3292568B94104D5E8DFA42BC /* Check Pods Manifest.lock */,
 				F45DD927177EC8E200B6A424 /* Sources */,
 				F45DD928177EC8E200B6A424 /* Frameworks */,
 				F45DD929177EC8E200B6A424 /* Resources */,
+				7A43E34C5D5443438D3AA1E3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +268,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Sihao Lu";
 				TargetAttributes = {
+					F45DD92A177EC8E200B6A424 = {
+						DevelopmentTeam = 52RD2GH5DP;
+					};
 					F45DD94B177EC8E200B6A424 = {
 						TestTargetID = F45DD92A177EC8E200B6A424;
 					};
@@ -244,14 +316,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3292568B94104D5E8DFA42BC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7A43E34C5D5443438D3AA1E3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F45DD927177EC8E200B6A424 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45DD945177EC8E200B6A424 /* ViewController.m in Sources */,
+				F45DD945177EC8E200B6A424 /* EncryptChoosePhotoViewController.m in Sources */,
+				F4C8BDCA178012C100286C09 /* UIImage+Resize.m in Sources */,
+				F4C8BDCF1780130200286C09 /* UIImage+Alpha.m in Sources */,
+				F45DD96B177F0AD100B6A424 /* NSString+Brainfuck.m in Sources */,
+				F45DD976177F605100B6A424 /* UIImage+ImageEffects.m in Sources */,
 				F45DD93F177EC8E200B6A424 /* AppDelegate.m in Sources */,
+				F4C8BDD01780130200286C09 /* UIImage+RoundedCorner.m in Sources */,
 				F45DD93B177EC8E200B6A424 /* main.m in Sources */,
+				F4C8BDF11780AF9A00286C09 /* DecryptSecretViewController.m in Sources */,
+				F4C8BDD317802D6600286C09 /* DecryptChoosePhotoViewController.m in Sources */,
+				F45DD973177F56B900B6A424 /* EncryptMessageViewController.m in Sources */,
+				F45DD972177F2FF600B6A424 /* ImageHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,9 +485,11 @@
 		};
 		F45DD95E177EC8E300B6A424 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D1399CF19B1435182D895D4 /* Pods/Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photo With Secret/Photo With Secret-Prefix.pch";
 				INFOPLIST_FILE = "Photo With Secret/Photo With Secret-Info.plist";
@@ -384,9 +500,11 @@
 		};
 		F45DD95F177EC8E300B6A424 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D1399CF19B1435182D895D4 /* Pods/Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Photo With Secret/Photo With Secret-Prefix.pch";
 				INFOPLIST_FILE = "Photo With Secret/Photo With Secret-Info.plist";
@@ -454,6 +572,7 @@
 				F45DD95F177EC8E300B6A424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F45DD960177EC8E300B6A424 /* Build configuration list for PBXNativeTarget "Photo With SecretTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +581,7 @@
 				F45DD962177EC8E300B6A424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

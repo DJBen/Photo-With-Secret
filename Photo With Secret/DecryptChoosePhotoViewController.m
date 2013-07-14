@@ -195,6 +195,7 @@
     [picker dismissViewControllerAnimated:YES completion:^{
         [self applyBackgroundToView:self.choosePhotoLabel sourceBlurFromView:self.backgroundImageView];
         [self applyBackgroundToView:self.existingPhotoButton sourceBlurFromView:self.backgroundImageView];
+        self.secretMessage = nil;
     }];
     
 }
@@ -208,10 +209,6 @@
     for (int i = 0; i < 2; i++) {
         if (bitmap[i] != 255 - bitmap[i + 4]) valid = NO;
     }
-//    for (int i = 0; i < 8; i++) {
-//        NSLog(@"bit %d = %d", i, bitmap[i]);
-//    }
-//    
     if (!valid || interval == 0) {
         NSLog(@"This image does not contain a secret or it is broken.");
         return nil;
@@ -257,7 +254,6 @@
         default:
             break;
     }
-//    NSLog(@"!!! %d: %d %d %d", value, red, green, blue);
     return nil;
 }
 

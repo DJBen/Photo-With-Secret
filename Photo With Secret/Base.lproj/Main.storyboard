@@ -310,8 +310,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FindSecretIcon" width="48" height="48"/>
-        <image name="HideSecretIcon" width="60" height="60"/>
+        <image name="FindSecretIcon" width="24" height="24"/>
+        <image name="HideSecretIcon" width="24" height="24"/>
     </resources>
     <classes>
         <class className="DecryptChoosePhotoViewController" superclassName="UIViewController">
